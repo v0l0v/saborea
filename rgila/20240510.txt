@@ -1,0 +1,3 @@
+selector1, Ensalada RVCaprese, Ensalada Valenciana, Gazpacho
+selector2, Paella Valenciana, RV Fabada vegana, Calabaza asada con col rizada
+selector3, Flan de huevo, Sandia, RV Bizcocho

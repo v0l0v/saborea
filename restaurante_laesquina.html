@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Restaurante La Esquina</title>
+    <link href="cssSaborea.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="logoSaborea.png" alt="Logo Saborea" id="logo-saborea" style="height: 80px;">
+        </a>
+    </header>
+
+    <ul id="restaurantsList"></ul>
+    <h1>Restaurante La Esquina</h1>
+    <h2>Elige tu menu favorito<br>Envianoslo por Whatsapp<br>Te lo llevamos donde quieras</h2>
+    <div class="h2">     
+        <select id="selector1"></select>
+        <select id="selector2"></select>
+        <select id="selector3"></select>
+        <textarea id="direccion" style="select;" placeholder="Añade tu direccion de entrega aquí..." rows="3"></textarea>
+        <textarea id="anotaciones" style="select;" placeholder="Añade tus anotaciones aquí..." rows="6"></textarea>
+        <button id="compartir-btn" onclick="compartirw()">Enviar por WhatsApp</button>
+    </div>
+    <script src="loadcsv.js"></script>
+    <script src="compartir.js"></script>
+</body>
+</html>
