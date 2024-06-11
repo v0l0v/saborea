@@ -1,0 +1,228 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 100px);
+    background: url('fondoSaborea.webp') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    text-align: justify; /* or other alignment properties like left, right, center */
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+}
+
+h1, h2, h4 {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 2px;
+    width: 75%;
+    text-align: center; /* Centra el texto */
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    width: 75%;
+    margin-bottom: 2px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+h4 {
+    font-size: 16px;
+    margin-top: 2px;
+    text-align: center; /* Centra el texto */
+    width: 80%; /* Ajusta el ancho al 80% del contenedor */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    padding: 10px; /* Añade un poco de padding para separación */
+}
+
+header {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+#logo-saborea {
+    height: 175px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#logo-rda {
+    height: 175px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#restaurantsList {
+    display: none;
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+    max-width: 600px;
+    background-color: transparent; /* Hace que el fondo sea completamente transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#restaurantsList li {
+    background-color: rgba(250, 250, 250, 0.658); /* Fondo gris claro semitransparente */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#restaurantsList li a {
+    color: rgb(0, 0, 0);      /* Establece el color del texto a negro */
+    
+}
+
+button {
+    background-color: rgb(99, 1, 26);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.button-container {
+    display: flex;    /* Establece el contenedor como un contenedor flex */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente si deseas */
+}
+
+.button-container i {
+    font-size: 24px;  /* Ajusta el tamaño del icono si es necesario */
+    color:  rgb(99, 1, 26);     /* Cambia el color a blanco */
+    cursor: pointer;
+}
+
+.button-container button {
+    background: none;
+    border: none;
+    padding: 10px;    /* Asegúrate de que el padding sea adecuado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.button-container button.active i {
+    color: white;  /* Color burdeos para la página activa */
+}
+
+select {
+    background-color: rgb(99, 1, 26);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    flex: 1;
+    display: block;
+    width: 100%; /* Establece la anchura al 100% del contenedor */
+    margin-bottom: 10px; /* Espacio entre selectores */
+    text-align-last: center; /* Centra el texto */
+    -moz-text-align-last: center; /* Centra el texto en Firefox */
+}
+
+textarea {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    margin: 5px; /* Ajustar según lo necesario */
+    padding: 8px; /* Espaciado interno para hacerlo visualmente consistente con los selectores */
+    border: 1px solid #cccccc; /* Borde similar al de los selectores */
+    border-radius: 4px; /* Bordes redondeados como los selectores, si es que los tienen */
+    flex: 1;
+    display: block;
+    font-family: 'Roboto', sans-serif; /* Asumiendo que Roboto es la fuente utilizada en los selectores */
+    font-size: 16px; /* Tamaño de fuente similar al de los selectores */
+    background-color: rgb(99, 1, 26); /* Fondo blanco o el que corresponda al estilo del formulario */
+    color: rgb(0, 0, 0); /* Color del texto, ajustar si es necesario */
+    resize: vertical; /* Desactivar el redimensionamiento para mantener un tamaño fijo */
+    box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho */
+    margin-bottom: 10px; /* Espacio debajo del textarea, ajustar según sea necesario */
+    text-align-last: center; /* Centra el texto */
+    -moz-text-align-last: center; /* Centra el texto en Firefox */
+}
+
+textarea:focus {
+    border-color: #0056b3; /* Color de borde al enfocar, ajustar para que coincida con el estilo de los selectores */
+    outline: none; /* Eliminar el contorno predeterminado para mantener el estilo consistente */
+}
+
+select, textarea {
+    width: 100%; /* o otra medida específica si es necesario */
+}
+
+#compartir-btn {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    flex: 1;
+    display: block;
+    width: 100%; /* Establece la anchura al 100% del contenedor */
+    margin-bottom: 10px; /* Espacio entre selectores */
+    text-align-last: center; /* Centra el texto */
+    -moz-text-align-last: center; /* Centra el texto en Firefox */
+}
+
+/* CSS para los botones de control de audio */
+.audio-control-container {
+    display: flex;
+    justify-content: center; /* Centrar los botones horizontalmente */
+    margin: 20px 0; /* Ajustar los márgenes superior e inferior */
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.audio-control {
+    background-color: rgb(156,188,186); /* Fondo del botón */
+    color: white;
+    border: none;
+    font-size: 24px;
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    border-radius: 50%; /* Hacer el botón redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-control i {
+    pointer-events: none;
+}
+
+.audio-control:hover {
+    background-color: rgb(255,203,182); /* Cambiar el color al pasar el ratón */
+}
+
+/* Estilos para la imagen */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.responsive-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
