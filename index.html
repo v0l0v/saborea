@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enlaces a fuentes y estilos CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="rda.css" rel="stylesheet">
+
+    <title>Saborea</title>
+<body>
+    <!-- Encabezado con logo -->
+    <header>
+        <a href="index.html">
+            <img src="logosaborea.png" alt="Logo Ruta del Amor" id="logo-rda2">
+        </a>
+    </header>
+	
+    <div class="button-container">
+        
+        <button onclick="redirectToBestRated()" style="background: none; border: none;" title="Ver el mejor valorado">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </button>
+
+        <button onclick="window.location.href='mapa.html'" style="background: none; border: none;" title="Ver el mapa">
+            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+        </button>
+
+        <button onclick="window.location.href='registro.html'" style="background: none; border: none;" title="Registro de visitas">
+            <i class="fa fa-book" aria-hidden="true"></i> <!-- Icono de bloc de notas -->
+        </button>
+    </div>
+    <p style="text-align: center; margin: 20px;">
+    Estos son los restaurantes que estan a tu alrededor </p>
+
+    <ul id="restaurantsList"></ul>
+    <script src="scriptSaborea.js"></script>
+    
+</body>
+</html>
